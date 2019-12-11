@@ -1,0 +1,14 @@
+@model MainModel
+
+<div class="container">
+    <div class="">
+        <h1>Existing Category</h1>
+        <ul style="list-style-type:None;">
+            @foreach (Category currentCategory in Model.allCategories)
+            {
+                <li> <a asp-controller="Categories" asp-action="Details" asp-id="@currentCategory.CategoryId">@currentCategory.Name</a> </li>
+                    
+            }
+        </ul>
+    </div>
+</div>

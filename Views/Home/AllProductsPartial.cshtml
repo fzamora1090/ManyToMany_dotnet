@@ -1,0 +1,14 @@
+@model MainModel
+
+<div class="container">
+    <div class="">
+        <h1>Existing Products</h1>
+        <ul style="list-style-type:None;">
+            @foreach (var currentProduct in Model.allProducts)
+            {
+                <li> <a asp-controller="Products" asp-action="Details" asp-id="@currentProduct.ProductId">@currentProduct.Name</a> </li>
+                    
+            }
+        </ul>
+    </div>
+</div>

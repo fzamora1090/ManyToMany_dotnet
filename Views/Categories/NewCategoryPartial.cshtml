@@ -1,0 +1,18 @@
+@model MainModel
+
+<div class="container">
+        <h1>New Category</h1>
+        <form asp-controller="Categories" asp-action="Create">
+
+        <div class="form-group">
+            <span class="text-danger" asp-validation-for="Category.Name"></span>
+            <label asp-for="Category.Name">Name</label>
+            <input type="text" class="form-control" asp-for="Category.Name" placeholder="Name">
+        </div>
+       
+        <button type="submit" class="btn btn-md btn-primary">Create</button>
+        <a class="btn btn-md btn-secondary " asp-controller="Categories" asp-action="All">Cancel</a>
+
+    </form>
+    
+</div>
